@@ -16,8 +16,8 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const [name, setName] = useState("");
-  const [open, setOpen] = useState(false);
+  // const [name, setName] = useState("");
+  // const [open, setOpen] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
