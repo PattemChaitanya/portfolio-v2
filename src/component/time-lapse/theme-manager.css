@@ -1,0 +1,170 @@
+ .circle-container {
+   position: relative;
+ }
+
+ .line {
+   background: var(--primary-color);
+   z-index: -1;
+   width: 1px;
+   height: 180vh;
+   opacity: 0.4;
+   position: fixed;
+   top: 0;
+   transform-origin: top;
+   overflow: none;
+   z-index: 10;
+ }
+
+ .star {
+   z-index: 10;
+   position: fixed;
+   width: 2px;
+   height: 2px;
+   background-color: white;
+   border-radius: 50%;
+   animation: twinkle 2s infinite ease-in-out;
+ }
+
+ @keyframes twinkle {
+
+   0%,
+   100% {
+     opacity: 1;
+   }
+
+   50% {
+     opacity: 0.5;
+   }
+ }
+
+ /* Add additional stars with pseudo-elements */
+ .star::before,
+ .star::after {
+   content: '';
+   position: absolute;
+   width: 2px;
+   height: 2px;
+   background-color: white;
+   border-radius: 50%;
+   animation: twinkle 3s infinite ease-in-out;
+ }
+
+ .star-0 {
+   top: 10px;
+   box-shadow: white 50px 0px, white 200px 10px, white 300px 20px, white 500px 30px, white 600px 40px, white 700px 50px, white 800px 60px, white 900px 70px, white 1000px 80px, white 1100px 90px, white 1200px 100px, white 80px 110px, white 320px 120px, white 480px 130px, white 760px 140px, white 620px 150px, white 1400px 160px, white 1650px 170px;
+   left: 0px;
+ }
+
+ .star-1 {
+   top: 20px;
+   box-shadow: white 123px 0px, white 456px 10px, white 789px 20px, white 1012px 30px, white 1345px 40px, white 1678px 50px, white 1901px 60px, white 2123px 70px, white 2456px 80px, white 2789px 90px, white 3012px 100px, white 3345px 110px, white 3678px 120px, white 3901px 130px, white 4123px 140px, white 4456px 150px, white 4789px 160px, white 5012px 170px;
+   left: 10px;
+ }
+
+ .star-2 {
+   top: 30px;
+   box-shadow: white 150px 0px, white 600px 10px, white 900px 20px, white 1500px 30px, white 1800px 40px, white 2100px 50px, white 2400px 60px, white 2700px 70px, white 3000px 80px, white 3300px 90px, white 3600px 100px, white 240px 110px, white 960px 120px, white 1440px 130px, white 2280px 140px, white 1860px 150px, white 4200px 160px, white 4950px 170px;
+   left: 20px;
+ }
+
+ .star-0::before,
+ .star-0::after {
+   box-shadow:
+    123px 0px white,
+    46px 10px white,
+    81px 20px white,
+    123px 30px white,
+    234px 40px white,
+    345px 50px white,
+    456px 60px white,
+    567px 70px white,
+    678px 80px white,
+    789px 90px white,
+    890px 100px white,
+    901px 110px white,
+    1012px 120px white,
+    1123px 130px white,
+    1234px 140px white,
+    123px 150px white,
+    46px 160px white,
+    81px 170px white,
+    123px 180px white,
+    234px 190px white,
+    345px 200px white,
+    456px 0px white,
+    567px 10px white,
+    678px 20px white,
+    789px 30px white,
+    890px 40px white,
+    901px 50px white,
+    1012px 60px white,
+    1123px 70px white,
+    1234px 80px white;
+ }
+
+ .star-1::before,
+ .star-1::after {
+   box-shadow:
+   45px 0px white,
+     75px 10px white,
+     145px 20px white,
+     255px 30px white,
+     365px 40px white,
+     475px 50px white,
+     585px 60px white,
+     695px 70px white,
+     805px 80px white,
+     915px 90px white,
+     1025px 100px white,
+     1135px 110px white,
+     1245px 120px white,
+     1355px 130px white,
+     45px 140px white,
+     75px 150px white,
+     145px 160px white,
+     255px 170px white,
+     365px 180px white,
+     475px 190px white,
+     585px 200px white,
+     695px 0px white,
+     805px 10px white,
+     915px 20px white,
+     1025px 30px white,
+     1135px 40px white,
+     1245px 50px white,
+     1355px 60px white;
+ }
+
+ .star-2::before,
+ .star-2::after {
+   box-shadow:
+     123px 145px white,
+     56px 78px white,
+     34px 190px white,
+     89px 14px white,
+     67px 135px white,
+     145px 167px white,
+     178px 57px white,
+     12px 91px white,
+     290px 103px white,
+     323px 115px white,
+     167px 127px white,
+     234px 139px white,
+     456px 151px white,
+     978px 163px white,
+     245px 175px white,
+     589px 187px white,
+     612px 199px white,
+     390px 211px white,
+     723px 223px white,
+     567px 235px white,
+     634px 247px white,
+     856px 259px white,
+     578px 271px white,
+     245px 283px white,
+     189px 295px white,
+     512px 307px white,
+     490px 319px white,
+     723px 331px white,
+     867px 343px white;
+ }

@@ -1,0 +1,11 @@
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .title{
+    font-size: 2rem;
+  }
+}

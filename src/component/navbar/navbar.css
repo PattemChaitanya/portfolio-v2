@@ -1,0 +1,38 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 10px;
+  position: relative;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.mobile-navbar {
+  position: absolute;
+  top: 60px;
+  right: 4px;
+  background: var(--background-color);
+  padding: 16px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 150px;
+  z-index: 10
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    padding: 0;
+  }
+}

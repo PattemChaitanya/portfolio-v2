@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
+import CursorFollower from "./cursor/cursor";
+import TimeLapseTheme from "./time-lapse/theme-manager";
+import Navbar from "./navbar/navbar";
 
 function Layout(props) {
   const {
@@ -47,12 +50,15 @@ function Layout(props) {
   }, [title, keywords]);
 
   return (
-    <>
+    <main>
       {allTags.length && (
         <Helmet titleTemplate={titleTemplate}>{allTags}</Helmet>
       )}
+      <Navbar />
+      <CursorFollower />
+      <TimeLapseTheme />
       {children}
-    </>
+    </main>
   );
 }
 
