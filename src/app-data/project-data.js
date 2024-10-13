@@ -56,8 +56,8 @@ export const projects = [
     id: 5,
     name: "Personal Website(Protofolio)",
     image: Portfolio,
-    githubLink: "",
-    liveSiteLink: "",
+    githubLink: "https://github.com/PattemChaitanya/portfolio-v2",
+    liveSiteLink: "https://chaitanya-pattem-v2.netlify.app/",
     tags: ["frontend"],
   },
   {

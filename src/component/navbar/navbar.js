@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.css";
 import { Link, useLocation } from "react-router-dom";
-import { Close, Logo, Menu } from "../../assets/svgIcons/allIcons";
+import { Close, Menu } from "../../assets/svgIcons/allIcons";
 
 const Navbar = () => {
   const location = useLocation();
@@ -19,8 +19,33 @@ const Navbar = () => {
 
   return (
     <nav className="navbar-container">
-      <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
-        <Logo />
+      <Link
+        to="/"
+        style={{
+          textDecoration: "none",
+        }}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="200"
+          height="50"
+          viewBox="0 0 200 50"
+        >
+          <style>
+            @import
+            url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+          </style>
+          <text
+            x="10"
+            y="35"
+            font-family="Dancing Script, cursive"
+            font-size={screenWidth > 500 ? "48" : "34"}
+            font-weight="500"
+            fill="currentColor"
+          >
+            Chey
+          </text>
+        </svg>
       </Link>
       {screenWidth >= 600 ? (
         <div className="navbar-links">

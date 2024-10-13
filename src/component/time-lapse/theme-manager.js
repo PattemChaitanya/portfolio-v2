@@ -34,8 +34,6 @@ function TimeLapseTheme() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentTime]);
 
-  console.log(currentTime.getHours() >= 17);
-
   return (
     <div className="circle-container">
       {currentTime.getHours() >= 7 &&

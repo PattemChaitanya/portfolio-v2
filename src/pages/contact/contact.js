@@ -3,6 +3,9 @@ import Layout from "../../component/Layout";
 import Footer from "../../component/footer/footer";
 import PageWrapper from "../../component/page-wrapper/page-wrapper";
 import HeaderTitle from "../../component/page-header/header-title";
+import { db } from "../../config/firebaseConfig";
+import { doc, setDoc } from "firebase/firestore";
+import { v4 as uuidv4 } from "uuid";
 
 const Contact = () => {
   const headerTags = {
@@ -28,11 +31,11 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // const uid = uuidv4();
+    const uid = uuidv4();
     // setOpen(true);
     // setName(formData.name);
-    // await setDoc(doc(firestore, "user-data", uid), { ...formData, id: uid });
-    console.log(formData);
+    await setDoc(doc(db, "user-data", uid), { ...formData, id: uid });
+    console.log(uid, formData, "submitted");
     setFormData({
       name: "",
       email: "",

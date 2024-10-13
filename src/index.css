@@ -8,6 +8,7 @@
   --primary-color: #A5D6A7;
   --secondary-color: #81C784;
   --text-color: #1B5E20;
+  --icon-color: #f1f1f1;
   --primary-color-hover: #C8E6C9;
 
   /* Typography */
@@ -54,6 +55,7 @@
   --primary-color: #00796B;
   --secondary-color: #004D40;
   --text-color: #E0F2F1;
+  --icon-color: #f1f1f1;
   --primary-color-hover: #B2DFDB;
 
   /* Typography */
@@ -100,6 +102,7 @@
   --primary-color: #A5D6A7;
   --secondary-color: #81C784;
   --text-color: #1B5E20;
+  --icon-color: #f1f1f1;
   --primary-color-hover: #C8E6C9;
 
   /* Typography */
@@ -146,6 +149,7 @@
   --primary-color: #00796B;
   --secondary-color: #004D40;
   --text-color: #E0F2F1;
+  --icon-color: #f1f1f1;
   --primary-color-hover: #B2DFDB;
 
   /* Typography */
@@ -241,10 +245,10 @@ input {
   width: min(500px, 100%);
   margin-bottom: 15px;
   border: none;
+  font-family: inherit;
 }
 
 input:focus {
-  background-color: #f0f8ff;
   border-color: #0077cc;
   outline: none;
 }
@@ -258,10 +262,10 @@ textarea {
   resize: none;
   border: none;
   margin-bottom: 15px;
+  font-family: inherit;
 }
 
 textarea:focus {
-  background-color: #f0f8ff;
   border-color: #0077cc;
   outline: none;
 }
@@ -369,6 +373,10 @@ p {
 @media screen and (max-width: 770px) {
   .tags-container {
     padding-block: 0;
+  }
+
+  .my-svg-icon {
+    color: var(--icon-color);
   }
 }
 

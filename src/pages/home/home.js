@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../../component/Layout";
 import Footer from "../../component/footer/footer";
 import { Link } from "react-router-dom";
 import PageWrapper from "../../component/page-wrapper/page-wrapper";
+import { globalAnalytics } from "../../config/firebase-analytics";
+import { getDeviceInfo } from "../../config/user-details";
+import { firebaseCallingFunctions } from "../../config/firebase-functions";
 
 const Home = () => {
   const headerTags = {
@@ -11,6 +14,19 @@ const Home = () => {
     titleTemplate: "Home | Chaitanya Pattem",
     description: "Home of this porfolio of chaitanya's website",
   };
+
+  const gettingDetails = async () => {
+    const deviceInfo = await getDeviceInfo();
+    firebaseCallingFunctions("post", deviceInfo);
+    globalAnalytics({
+      eventName: "viewer_home_page",
+      type: "pageOnEnter",
+    });
+  };
+
+  useEffect(() => {
+    process.env.NODE_ENV !== "development" && gettingDetails();
+  }, []);
 
   return (
     <Layout headerTags={headerTags}>
