@@ -3,8 +3,8 @@ import Layout from "../../component/Layout";
 import Footer from "../../component/footer/footer";
 import PageWrapper from "../../component/page-wrapper/page-wrapper";
 import HeaderTitle from "../../component/page-header/header-title";
-import { db } from "../../config/firebaseConfig";
-import { doc, setDoc } from "firebase/firestore";
+// import { db } from "../../config/firebaseConfig";
+// import { doc, setDoc } from "firebase/firestore";
 import { v4 as uuidv4 } from "uuid";
 
 const Contact = () => {
