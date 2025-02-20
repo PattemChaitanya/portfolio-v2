@@ -3,7 +3,7 @@
  }
 
  .line {
-   background: var(--primary-color);
+   background: var(--color-outline);
    z-index: -1;
    width: 1px;
    height: 180vh;
@@ -70,42 +70,42 @@
  .star-0::before,
  .star-0::after {
    box-shadow:
-    123px 0px white,
-    46px 10px white,
-    81px 20px white,
-    123px 30px white,
-    234px 40px white,
-    345px 50px white,
-    456px 60px white,
-    567px 70px white,
-    678px 80px white,
-    789px 90px white,
-    890px 100px white,
-    901px 110px white,
-    1012px 120px white,
-    1123px 130px white,
-    1234px 140px white,
-    123px 150px white,
-    46px 160px white,
-    81px 170px white,
-    123px 180px white,
-    234px 190px white,
-    345px 200px white,
-    456px 0px white,
-    567px 10px white,
-    678px 20px white,
-    789px 30px white,
-    890px 40px white,
-    901px 50px white,
-    1012px 60px white,
-    1123px 70px white,
-    1234px 80px white;
+     123px 0px white,
+     46px 10px white,
+     81px 20px white,
+     123px 30px white,
+     234px 40px white,
+     345px 50px white,
+     456px 60px white,
+     567px 70px white,
+     678px 80px white,
+     789px 90px white,
+     890px 100px white,
+     901px 110px white,
+     1012px 120px white,
+     1123px 130px white,
+     1234px 140px white,
+     123px 150px white,
+     46px 160px white,
+     81px 170px white,
+     123px 180px white,
+     234px 190px white,
+     345px 200px white,
+     456px 0px white,
+     567px 10px white,
+     678px 20px white,
+     789px 30px white,
+     890px 40px white,
+     901px 50px white,
+     1012px 60px white,
+     1123px 70px white,
+     1234px 80px white;
  }
 
  .star-1::before,
  .star-1::after {
    box-shadow:
-   45px 0px white,
+     45px 0px white,
      75px 10px white,
      145px 20px white,
      255px 30px white,

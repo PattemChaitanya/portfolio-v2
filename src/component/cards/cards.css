@@ -1,6 +1,6 @@
 .card-container {
   object-fit: contain;
-  width: calc(50% - 6px);
+  width: calc(33% - 6px);
   height: 300px;
   border: 1px solid #cecece;
   border-radius: 8px;
@@ -10,6 +10,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transition: all 0.3s;
 }
 
 .name {
@@ -41,6 +42,10 @@
   & .links-card {
     display: flex;
   }
+
+  scale: 1.1;
+  transition: all 0.3s;
+  z-index: 12;
 }
 
 @media screen and (max-width: 920px) {
@@ -50,6 +55,10 @@
 
   .links-card {
     display: flex;
+  }
+
+  .card-container {
+    width: calc(50% - 6px);
   }
 }
 

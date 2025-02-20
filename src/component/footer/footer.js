@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const Footer = ({ children, path }) => {
   return (
-    <div className="footer-container">
+    <footer className="footer-container">
       <Link to={path} className="footer-top">
         {children}
         <PointRightIcon />
@@ -22,10 +22,10 @@ const Footer = ({ children, path }) => {
           <LinkedInIcon />
         </Link>
         <Link to="https://github.com/PattemChaitanya" target="_blank">
-          <GitHubIcon />
+          <GitHubIcon sx={{ float: "center" }} />
         </Link>
       </div>
-    </div>
+    </footer>
   );
 };
 

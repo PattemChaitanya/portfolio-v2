@@ -31,37 +31,52 @@ const Home = () => {
   return (
     <Layout headerTags={headerTags}>
       <PageWrapper>
-        <div
-          style={{
-            paddingBlock: "10px",
-            paddingBottom: "3rem",
-            display: "flex",
-            flexDirection: "column",
-            gap: "24px",
-          }}
-        >
-          <h1 className="home-h1">I'm Chaitanya Pattem</h1>
-          <p className="home-p1">
-            I'm committed to continuous learning and innovation.
+        <h1 className="waviy">
+          Hey, I'm <span style={{ "--i": 1 }}>Chaitanya</span>{" "}
+          <span style={{ "--i": 2 }}>Pattem</span>
+        </h1>
+        <section className="home-page-container">
+          <p id="home-role">
+            Software Engineer | Web & IoT Developer | Tech Enthusiast
           </p>
-          <p className="home-p2">
-            I'm a software engineer specializing in building and scaling Web and
-            IOT applications using modern frameworks like Node.js, Express.js,
-            Electron.js and React.js. I have demonstrated ability to work within
-            Agile teams to deliver high-quality software solutions at{" "}
+          <p>
+            I’m a frontend developer, UX architect, and JavaScript engineer who
+            loves turning ideas into beautiful, functional web experiences.
+            Whether it’s crafting sleek interfaces, scaling web apps, or merging
+            software with hardware, I enjoy pushing the limits of what’s
+            possible.
+          </p>
+          <p>
+            At{" "}
             <Link
+              id="home-link"
               target="_blank"
               to="https://www.futuristiclabs.io/"
-              style={{ color: "#e15916" }}
             >
               Futuristic labs
             </Link>
+            , I work on cutting-edge projects that blend creativity with
+            technology. Some of my favorite work lives in my{" "}
+            <Link id="home-link" to="/projects">
+              Projects
+            </Link>{" "}
+            from interactive web applications to scalable IoT solutions. I also
+            love sharing insights, so check out my Articles for thoughts on
+            frontend development, UX, and emerging tech.
           </p>
-        </div>
+          <p>
+            When I’m not coding, you’ll probably find me exploring minimal
+            design, geeking out over new tech, or vibing to Pop & Jazz.{" "}
+            <Link id="home-link" to="/contact">
+              Contact Me
+            </Link>
+            , let’s build something amazing together!
+          </p>
+        </section>
+        <Footer path="/about">
+          <p className="link-p">Exploring more about me</p>
+        </Footer>
       </PageWrapper>
-      <Footer path="/about">
-        <p className="link-p">Continue to About</p>
-      </Footer>
     </Layout>
   );
 };

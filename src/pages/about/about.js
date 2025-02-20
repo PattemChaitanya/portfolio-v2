@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Layout from "../../component/Layout";
 import Footer from "../../component/footer/footer";
-import { professionallySkills, selfIntro } from "../../app-data/about-page";
-import Chip from "../../component/chip/chip";
+import { timelineData } from "../../app-data/about-page";
 import ModalView from "../../component/modal/modal";
 import PageWrapper from "../../component/page-wrapper/page-wrapper";
+import { motion } from "framer-motion";
+import HeaderTitle from "../../component/page-header/header-title";
 
 const About = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,60 +19,33 @@ const About = () => {
   return (
     <Layout headerTags={headerTags}>
       <PageWrapper>
-        <h2 className="about-h2">About me</h2>
-        <div className="about-content">
-          <p>{selfIntro.para1}</p>
-          <p>{selfIntro.para2}</p>
-          <p>{selfIntro.para3}</p>
+        <HeaderTitle headerTitle="About me." />
+        <div className="timeline-container">
+          {timelineData.map((timeline, index) => (
+            <div className="timeline">
+              {timeline.map((event, index) => (
+                <article className="timeline-item">
+                  <div className="timeline-dot" />
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.2 }}
+                  >
+                    <div className="timeline-content">
+                      <h3>{event.title}</h3>
+                      <p>{event.description}</p>
+                    </div>
+                  </motion.div>
+                </article>
+              ))}
+            </div>
+          ))}
         </div>
-        <h2 className="about-h2">Professionally Skills</h2>
-        <div className="about-content">
-          <ul className="paddingInlineStart">
-            {professionallySkills.pointsToShow.slice(0, 2).map((item) => (
-              <li>
-                <p>{item}</p>
-              </li>
-            ))}
-          </ul>
-          <p
-            style={{
-              color: "red",
-              opacity: 0.6,
-              textDecoration: "underline",
-              cursor: "pointer",
-              marginTop: "-12px",
-            }}
-            onClick={() => setIsOpen(true)}
-          >
-            Read more
-          </p>
-          <ui>
-            <h2 style={{ marginLeft: "-6px", paddingBottom: "8px" }}>
-              Skills I know & used
-            </h2>
-            {Object.keys(professionallySkills.skills).map((item) => (
-              <>
-                <li style={{ paddingBottom: "6px" }}>{item}</li>
-                <div
-                  style={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    gap: "10px",
-                    paddingBottom: "8px",
-                  }}
-                >
-                  {professionallySkills.skills[item].map((item) => (
-                    <Chip displayName={item} />
-                  ))}
-                </div>
-              </>
-            ))}
-          </ui>
-        </div>
+        <Footer path="/projects">
+          <p className="link-p">Checkout my work</p>
+        </Footer>
       </PageWrapper>
-      <Footer path="/projects">
-        <p className="link-p">Continue to Projects</p>
-      </Footer>
       {isOpen && <ModalView setIsOpen={setIsOpen} />}
     </Layout>
   );

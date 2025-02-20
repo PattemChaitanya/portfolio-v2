@@ -32,16 +32,8 @@ const Project = () => {
   return (
     <Layout headerTags={headerTags}>
       <PageWrapper>
-        <div
-          style={{
-            paddingBlock: "10px",
-            paddingBottom: "3rem",
-            display: "flex",
-            flexDirection: "column",
-            gap: "24px",
-          }}
-        >
-          <HeaderTitle headerTitle="Projects." />
+        <HeaderTitle headerTitle="Projects." />
+        <section className="tags-section">
           <div className="tags-container">
             {["all", "frontend", "backend", "coming soon"].map((item) => (
               <Tabs selectedTag={selectedTag} setSelectedTag={setSelectedTag}>
@@ -49,18 +41,7 @@ const Project = () => {
               </Tabs>
             ))}
           </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              gap: "12px",
-              flexWrap: "wrap",
-              alignItems: "center",
-              justifyItems: "center",
-              marginInline: "center",
-              width: "100%",
-            }}
-          >
+          <div className="cards-container">
             {projectData.map((item) => (
               <Cards
                 image={item.image}
@@ -70,11 +51,11 @@ const Project = () => {
               />
             ))}
           </div>
-        </div>
+        </section>
+        <Footer path="/resume">
+          <p>Summary of my work</p>
+        </Footer>
       </PageWrapper>
-      <Footer path="/resume">
-        <p>Continue to Resume</p>
-      </Footer>
     </Layout>
   );
 };

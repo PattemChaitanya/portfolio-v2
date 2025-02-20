@@ -2,20 +2,16 @@ import { useEffect, useState } from "react";
 import "./theme-manager.css";
 
 function TimeLapseTheme() {
-  const colorTheme = ["dawn", "light", "dusk", "dark"];
+  const colorTheme = ["light", "dark"];
   const [currentTime, setCurrentTime] = useState(new Date());
 
   const getCurrentTheme = () => {
     const hour = currentTime.getHours();
 
-    if (hour >= 5 && hour < 7) {
+    if (hour >= 6 && hour < 18) {
       return 0;
-    } else if (hour >= 7 && hour < 17) {
-      return 1;
-    } else if (hour >= 17 && hour < 19) {
-      return 2;
     } else {
-      return 3;
+      return 1;
     }
   };
 

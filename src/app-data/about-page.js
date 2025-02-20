@@ -74,4 +74,47 @@ const personalSkills = {
   ],
 };
 
-export { selfIntro, professionallySkills, personalSkills, toShowInModel };
+const timelineData = [
+  [
+    {
+      title: "Engineering",
+      description:
+        "I don’t just build software—I craft systems that scale, perform, and evolve. Engineering is more than writing code; it’s about solving complex problems with precision and foresight. With a strong foundation in Computer Science & Engineering, I approach development with a problem-solving mindset. I dive deep into the intricacies of performance optimization, and seamless front-end experiences. I believe that great engineering is not just about getting things to work—it's about making them work efficiently, reliably, and elegantly. Whether it's building IoT-driven applications that bridge software and hardware, I am always pushing the limits. The thrill of solving a tough challenge, the rush of seeing an idea come to life, and the relentless pursuit of better, faster, and smarter solutions fuel my passion for engineering.",
+    },
+    {
+      title: "Design",
+      description:
+        "Great design isn’t just about aesthetics—it’s about crafting intuitive, engaging, and accessible experiences. I believe that the best products are built at the intersection of engineering and design, where logic meets creativity. Every interaction should feel effortless, and every user journey should be seamless. I ensure that they feel right, work smoothly, and adapt to user needs. To me, design is about removing friction, creating delight, and making technology more human.",
+    },
+  ],
+  // [
+  //   {
+  //     title: "Started Journey 🚀",
+  //     description:
+  //       "Began my journey as a frontend developer, diving into JavaScript and React.",
+  //   },
+  //   {
+  //     title: "Built My First Project",
+  //     description:
+  //       "Launched my first major project, experimenting with UI/UX and performance optimizations. Launched my first major project, experimenting with UI/UX and performance optimizations.",
+  //   },
+  //   {
+  //     title: "Joined Futuristic Labs",
+  //     description:
+  //       "Started working at Futuristic Labs, building innovative web & IoT applications.",
+  //   },
+  //   {
+  //     title: "Present & Beyond",
+  //     description:
+  //       "Continuing to build, learn, and explore new technologies in web development.",
+  //   },
+  // ],
+];
+
+export {
+  selfIntro,
+  professionallySkills,
+  personalSkills,
+  toShowInModel,
+  timelineData,
+};

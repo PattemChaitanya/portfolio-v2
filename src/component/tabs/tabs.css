@@ -2,11 +2,18 @@
   cursor: pointer;
   text-transform: capitalize;
   width: fit-content;
+  padding: 4px 16px;
 }
 
 .selected {
   background: rgba(0, 0, 0, 0.4);
   border-radius: 4px;
-  color: var(--text-color);
-  padding: 4px 16px;
+  color: var(--color-on-background);
+}
+
+@media screen and (max-width: 768px) {
+  .tabs-container {
+    padding: 4px 8px;
+    text-align: center;
+  }
 }
