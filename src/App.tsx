@@ -33,14 +33,8 @@ function AnimatedRoutes() {
 }
 
 function App() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(false);
   const [show, setShow] = useState(false);
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-    document.documentElement.setAttribute('data-theme', newTheme);
-  };
 
   const handleOpen = () => {
     setShow(!show);
@@ -52,7 +46,10 @@ function App() {
 
   useEffect(() => {
     // Set initial theme
-    document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.setAttribute(
+      'data-theme',
+      theme ? 'dark' : 'light'
+    );
   }, [theme]);
 
   return (
@@ -61,7 +58,7 @@ function App() {
         <AppContext.Provider
           value={{
             theme,
-            toggleTheme,
+            setTheme,
             show,
             handleopen: () => handleOpen(),
             closeShow: () => closeShow(),

@@ -5,6 +5,7 @@ import PROJECTS_DATA from '../data/projects';
 
 export interface IAppContext {
   theme: boolean;
+  setTheme?: React.Dispatch<React.SetStateAction<boolean>>;
   show: boolean;
   handleopen?: () => void;
   closeShow?: () => void;

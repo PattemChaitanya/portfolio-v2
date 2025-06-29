@@ -4,10 +4,11 @@ import { Header } from './Layout/style';
 import Link from './nav-link';
 import AppContext from './utils/context';
 
-import { Logo, Icon } from './icons';
+import { Logo, Icon, Moon } from './icons';
 
 const Navbar = () => {
-  const { show, handleopen, closeShow } = useContext(AppContext);
+  const { show, handleopen, closeShow, theme, setTheme } =
+    useContext(AppContext);
 
   return (
     <>
@@ -20,19 +21,35 @@ const Navbar = () => {
               aria-label="Chaitanya Pattem Home"
               tabIndex={show ? -1 : undefined}
             >
-              <Logo />
+              <Logo theme={theme} />
             </Link>
 
             <button
-              className="navbar-toggler pr-0"
+              className="navbar-toggler pr-0 outline-none d-md-none d-block"
               type="button"
-              onClick={handleopen}
-              tabIndex={show ? -1 : undefined}
-              aria-label="Open Button Toggle"
+              onClick={() => setTheme && setTheme(!theme)}
             >
-              <span className="navbar-toggler-icon" />
+              <Moon />
             </button>
 
+            <div className="d-flex flex-row justify-content-center align-items-center">
+              <button
+                className="navbar-toggler pr-0 outline-none"
+                type="button"
+                onClick={() => setTheme && setTheme(!theme)}
+              >
+                <Moon />
+              </button>
+              <button
+                className="navbar-toggler pr-0 outline-none"
+                type="button"
+                onClick={handleopen}
+                tabIndex={show ? -1 : undefined}
+                aria-label="Open Button Toggle"
+              >
+                <span className="navbar-toggler-icon" />
+              </button>
+            </div>
             <div
               className={`collapse navbar-collapse  ${show && 'show'}`}
               id="collapsibleNavbar"

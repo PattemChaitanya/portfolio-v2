@@ -12,7 +12,6 @@ interface INextPageLink {
 const NextPageLink: React.FC<
   INextPageLink & React.AnchorHTMLAttributes<HTMLParagraphElement>
 > = ({ children, goto, ...rest }) => {
-  console.log(rest);
   return (
     <FooterStyle>
       <Link to={`${goto}`}>
