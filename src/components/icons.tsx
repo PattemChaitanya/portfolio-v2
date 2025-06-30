@@ -109,13 +109,14 @@ export const Logo = ({ theme }: { theme: boolean }) => (
   >
     <path
       d="M3 9.75L12 3L21 9.75V20C21 20.4142 20.6642 20.75 20.25 20.75H15.25C14.8358 20.75 14.5 20.4142 14.5 20V15C14.5 14.5858 14.1642 14.25 13.75 14.25H10.25C9.83579 14.25 9.5 14.5858 9.5 15V20C9.5 20.4142 9.16421 20.75 8.75 20.75H3.75C3.33579 20.75 3 20.4142 3 20V9.75Z"
-      stroke={theme ? '#155a2c' : '#fff'}
+      stroke={theme ? '#393939' : '#fff'}
       stroke-width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
   </svg>
 );
+
 export const Dribble = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"

@@ -23,15 +23,6 @@ const Navbar = () => {
             >
               <Logo theme={theme} />
             </Link>
-
-            <button
-              className="navbar-toggler pr-0 outline-none d-md-none d-block"
-              type="button"
-              onClick={() => setTheme && setTheme(!theme)}
-            >
-              <Moon />
-            </button>
-
             <div className="d-flex flex-row justify-content-center align-items-center">
               <button
                 className="navbar-toggler pr-0 outline-none"
@@ -117,6 +108,15 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
+            <button
+              className="navbar-toggler pr-0 outline-none d-none d-md-none d-lg-block"
+              aria-label="Toggle Theme"
+              style={{ outline: 'none !important' }}
+              type="button"
+              onClick={() => setTheme && setTheme(!theme)}
+            >
+              <Moon />
+            </button>
           </div>
         </nav>
       </Header>
